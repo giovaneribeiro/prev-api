@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "9bc1dedf-0e60-4399-8ad1-2289b09ba2b5",
+		"name": "prev-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "marca",
+			"item": [
+				{
+					"name": "consultar todas marcas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/marcas?ativo=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"marcas"
+							],
+							"query": [
+								{
+									"key": "ativo",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Filtros:\n1. ativo | Boolean | opcional"
+					},
+					"response": []
+				},
+				{
+					"name": "consultar marca por código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/marcas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"marcas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar marca por código",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/marcas/14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"marcas",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar marca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"prev\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/marcas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"marcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar marca por código",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ativo\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/marcas/14",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"marcas",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "empresa",
+			"item": [
+				{
+					"name": "consultar todas empresas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/empresas?marca=1&ativo=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas"
+							],
+							"query": [
+								{
+									"key": "marca",
+									"value": "1"
+								},
+								{
+									"key": "ativo",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Filtros:\n1. marca | Long | opcional\n2. ativo | Boolean | opcional"
+					},
+					"response": []
+				},
+				{
+					"name": "consultar empresa por código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"razaoSocial\": \"prev S/A\",\n\t\"marca\": {\n\t\t\"codigo\": 1\n\t},\n\t\"cnpj\": \"00.822.789/0001-66\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/empresas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar empresa por código",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ativo\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/4",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar empresa por código",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "plano",
+			"item": [
+				{
+					"name": "consultar todos planos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/planos?ativo=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"planos"
+							],
+							"query": [
+								{
+									"key": "ativo",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Filtros:\n1. ativo | Boolean | opcional"
+					},
+					"response": []
+				},
+				{
+					"name": "consultar plano por código",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/planos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"planos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar plano",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Integral CARD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/planos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"planos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar plano por código",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ativo\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/planos/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"planos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar plano por código",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/planos/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"planos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "empresaplano",
+			"item": [
+				{
+					"name": "consultar planos da empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/1/planos?ativo=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"1",
+								"planos"
+							],
+							"query": [
+								{
+									"key": "ativo",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Filtros:\n1. ativo | Boolean | opcional"
+					},
+					"response": []
+				},
+				{
+					"name": "consultar plano por código da empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/1/planos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"1",
+								"planos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar plano para empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"plano\": 2,\n\t\"valor\": 15.90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/3/planos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"3",
+								"planos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar plano por código da empresa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"plano\": 2,\n\t\"valor\": 15.90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/prev/api/empresas/3/planos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"prev",
+								"api",
+								"empresas",
+								"3",
+								"planos"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
